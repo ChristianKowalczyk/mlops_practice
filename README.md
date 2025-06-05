@@ -12,11 +12,11 @@ docker build --platform linux/amd64 -t username/tf-serving-model:v1.0 . <br/>
 docker push username/tf-serving-model:v1.0
 
 ## Deploy helm chart
-
 helm install tf-serving-release ./tf-serving-chart
 
 ## test_model.py 
-kubectl get services tf-serving-release-tf-serving-chart -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+kubectl get services tf-serving-release-tf-serving-chart -o jsonpath='{.status.loadBalancer.ingress[0].ip}' to output the external IP <br/>
+
 
 
 

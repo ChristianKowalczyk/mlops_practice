@@ -1,10 +1,7 @@
 python3 save_model.py
 
 ## Creating cluster
-gcloud container clusters create tf-serving-cluster \
-    --num-nodes=2 \
-    --machine-type=e2-medium \
-    --zone us-central1-a
+gcloud container clusters create tf-serving-cluster --num-nodes=2 --machine-type=e2-medium --zone us-central1-a
 
 ## Getting credential
 gcloud container clusters get-credentials tf-serving-cluster --zone us-central1-a --project <YOUR_GCP_PROJECT_ID>
